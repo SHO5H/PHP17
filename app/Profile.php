@@ -10,7 +10,11 @@ class Profile extends Model
     public static $rules = array(
         'name' => 'required',
         'gender' => 'required',
-        'hobby' => 'required',
+        'hoby' => 'required',
         'introduction' => 'required',
     );
+     public function past()
+    {
+      return $this->hasMany('App\Past');
+    }
 }
